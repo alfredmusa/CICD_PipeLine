@@ -1,3 +1,4 @@
+from Cython.Build import cythonize
 from setuptools import setup, find_packages
 import pathlib
 
