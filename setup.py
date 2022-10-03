@@ -6,7 +6,8 @@ setup(
     version='7.1.3',
     python_requires="==3.8",
     install_requires=[
-        'Cython','pytest','labels','pandas','numpy<1.22.0'
+        'pytest','labels','pandas','numpy<1.22.0'
     ],
-    packages=find_packages(where="src")
+    packages=find_packages(where="src"),
+    ext_modules=cythonize(ext_modules)
 )
