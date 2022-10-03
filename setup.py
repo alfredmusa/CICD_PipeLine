@@ -1,6 +1,5 @@
 from setuptools import setup, find_packages
 import pathlib
-import numpy
 from Cython.Build import cythonize
 
 
