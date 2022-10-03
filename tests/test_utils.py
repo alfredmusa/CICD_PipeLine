@@ -1,4 +1,4 @@
-from utils import add
+from utils.py import add
 import pytest
 
 @pytest.mark.parametrize('x, y, result', [
