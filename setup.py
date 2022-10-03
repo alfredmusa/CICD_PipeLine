@@ -8,6 +8,5 @@ setup(
     install_requires=[
         "Cython","pytest","labels","pandas","numpy<1.22.0"
     ],
-    packages=find_packages(where="src"),
-    ext_modules=cythonize(EXTENSIONS)
+    packages=find_packages(where="src")
 )
