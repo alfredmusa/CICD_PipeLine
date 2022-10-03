@@ -1,4 +1,4 @@
-from utils.py import add
+from github.workspace.CICD_PipeLine.utils.py import add
 import pytest
 
 @pytest.mark.parametrize('x, y, result', [
