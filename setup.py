@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 import pathlib
-
+from Cython.Build import cythonize
 setup(
     name='CICD_PipeLine',
     version='7.1.3',
