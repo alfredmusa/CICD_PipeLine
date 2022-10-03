@@ -11,6 +11,7 @@
     :license: BSD, see LICENSE for details.
 
 """
+from .utils import *
 
 from __future__ import unicode_literals
 
