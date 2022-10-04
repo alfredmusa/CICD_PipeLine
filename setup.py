@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import pathlib
 import os
 import sys
-import Cython
+import cython
 
 setup(
     name='CICD_PipeLine',
@@ -15,7 +15,7 @@ setup(
             "setuptools>=18.0",
         ],
     install_requires=[
-        'Cython','pytest','labels','pandas','numpy<1.20.0; python_version<"3.7"'
+        'cython','pytest','labels','pandas','numpy<1.20.0; python_version<"3.7"'
     ],
     packages=find_packages(where="src")
 )
