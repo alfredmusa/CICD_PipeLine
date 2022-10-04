@@ -3,9 +3,6 @@ import pathlib
 import os
 import sys
 
-SETUP_REQUIRES = [
-    'python=3.8',
-]
 
 setup(
     name='CICD_PipeLine',
