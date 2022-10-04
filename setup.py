@@ -7,7 +7,10 @@ setup(
     python_requires=">=3.6",
     packages=find_packages(where="src"),
     install_requires=[
-        'Cython','pytest','labels','pandas==1.3.4','numpy==1.21.4'
+        "numpy>=1.19.5",
+        "pandas",
+        "cython",
+        "pytest",
     ]
     
 )
