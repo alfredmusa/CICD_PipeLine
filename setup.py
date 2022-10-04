@@ -3,9 +3,14 @@ import pathlib
 import os
 import sys
 
+SETUP_REQUIRES = [
+    'python=3.8',
+]
+
 setup(
     name='CICD_PipeLine',
     version='7.1.3',
+    setup_requires=SETUP_REQUIRES,
     python_requires="==3.8",
     install_requires=[
         'cython','pytest','labels','pandas','numpy'
