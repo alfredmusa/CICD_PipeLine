@@ -5,8 +5,9 @@ setup(
     name='CICD_PipeLine',
     version='7.1.3',
     python_requires=">=3.6",
+    packages=find_packages(where="src"),
     install_requires=[
-        'cython','pytest','labels','pandas','numpy==1.21.4'
-    ],
-    packages=find_packages(where="src")
+        'Cython','pytest','labels','pandas==1.3.4','numpy==1.21.4'
+    ]
+    
 )
