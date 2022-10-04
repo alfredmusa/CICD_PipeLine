@@ -10,7 +10,7 @@ setup(
     python_requires=">=3.7",
     packages=find_packages(where="src"),
     install_requires=[
-        'pytest'
+        'pytest','labels'
     ]
     
 )
