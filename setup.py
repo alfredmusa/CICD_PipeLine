@@ -2,7 +2,6 @@ from setuptools import setup, find_packages
 import pathlib
 import os
 import sys
-import cython
 
 setup(
     name='CICD_PipeLine',
