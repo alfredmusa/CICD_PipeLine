@@ -9,7 +9,7 @@ setup(
     python_requires=">=3.7",
     setup_requires=['cython', 'numpy'],
     install_requires=[
-        'cython','pytest','labels','pandas','numpy<1.20.0; python_version<"3.7"'
+        'cython','pytest','labels','pandas','numpy<1.20.0'
     ],
     packages=find_packages(where="src")
 )
