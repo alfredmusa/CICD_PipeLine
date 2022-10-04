@@ -15,7 +15,7 @@ setup(
             "setuptools>=18.0",
         ],
     install_requires=[
-        "Cython","pytest","labels","pandas","numpy<1.20.0; python_version<"3.7""
+        'Cython','pytest','labels','pandas','numpy<1.20.0; python_version<"3.7"'
     ],
     packages=find_packages(where="src")
 )
