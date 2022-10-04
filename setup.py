@@ -8,7 +8,8 @@ setup(
     python_requires=">=3.7",
     packages=find_packages(where="src"),
     install_requires=[
-        'py'
-    ]
+        'setuptools'
+    ],
+    tests_require=['pytest']
     
 )
