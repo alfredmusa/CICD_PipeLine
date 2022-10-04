@@ -7,7 +7,7 @@ setup(
     version='7.1.3',
     python_requires=">=3.7",
     install_requires=[
-        "Cython","pytest","labels","pandas","numpy==1.21.5"
+        "Cython","pytest","labels","pandas","numpy"
     ],
     packages=find_packages(where="src")
 )
