@@ -63,11 +63,22 @@ def main():
 
     setup(
         name="CICD_PipeLine",
-        version='7.1.3',
+        description="pytest: simple powerful testing with Python",
+        use_scm_version={"write_to": "src/_pytest/_version.py"},
+        url="http://pytest.org",
+        project_urls={
+            "Source": "https://github.com/pytest-dev/pytest",
+            "Tracker": "https://github.com/pytest-dev/pytest/issues",
+        },
         license="MIT license",
         platforms=["unix", "linux", "osx", "cygwin", "win32"],
+        author=(
+            "Holger Krekel, Bruno Oliveira, Ronny Pfannschmidt, "
+            "Floris Bruynooghe, Brianna Laugher, Florian Bruhin and others"
+        ),
         entry_points={"console_scripts": ["pytest=pytest:main", "py.test=pytest:main"]},
         classifiers=classifiers,
+        keywords="test unittest",
         # the following should be enabled for release
         setup_requires=["setuptools-scm"],
         package_dir={"": "src"},
