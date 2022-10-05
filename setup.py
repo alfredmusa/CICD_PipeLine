@@ -21,7 +21,7 @@ def find_version(*paths):
     return version
 
 
-version = find_version('pymesos', '__init__.py')
+version = find_version('CICD_PipeLine', '__init__.py')
 install_requires=[
     'six',
     'http-parser',
