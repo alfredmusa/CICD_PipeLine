@@ -19,6 +19,8 @@ classifiers = [
     for x in "2 2.7 3 3.4 3.5 3.6 3.7".split()
 ]
 
+with open("README.rst") as fd:
+    long_description = fd.read()
 
 
 def get_environment_marker_support_level():
@@ -80,6 +82,7 @@ def main():
     setup(
         name="pytest",
         description="pytest: simple powerful testing with Python",
+        long_description=long_description,
         use_scm_version={"write_to": "src/_pytest/_version.py"},
         url="http://pytest.org",
         project_urls={
