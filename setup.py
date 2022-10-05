@@ -1,15 +1,13 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
+requirements = [
+    'pytest'
+]
 
 
 setup(
-    name='CICD_PipeLine',
+    name="downloader_cli",
     version='7.1.3',
-    python_requires=">=3.7",
     packages=find_packages(where="src"),
-    install_requires=[
-        'setuptools','labels'
-    ],
-    tests_require=['pytest']
-    
+    install_requires=requirements
 )
