@@ -5,6 +5,11 @@ jobs:
     name: GitHub Action for pytest
     runs-on: ubuntu-latest
     steps:
+    # Setup Python (faster than using Python container)
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.x"
     - uses: actions/checkout@master
     - name: GitHub Action for pytest
       uses: cclauss/GitHub-Action-for-pytest@master
