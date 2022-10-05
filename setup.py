@@ -9,6 +9,6 @@ setup(
     name="CICD_PipeLine",
     version='7.1.3',
     python_requires=">=3.7",
-    packages=find_packages(where="src"),
+    packages=find_packages(),
     install_requires=requirements
 )
