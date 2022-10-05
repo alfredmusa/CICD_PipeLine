@@ -1,60 +1,31 @@
-import os
-import re
-import sys
-from setuptools import setup, find_packages
 
-needs_pytest = {'pytest', 'test', 'ptr'}.intersection(sys.argv)
-pytest_runner = ['pytest-runner'] if needs_pytest else []
+from setuptools import setup
 
 
-def find_version(*paths):
-    fname = os.path.join(*paths)
-    with open(fname) as fhandler:
-        version_file = fhandler.read()
-        version_match = re.search(r"^__VERSION__ = ['\"]([^'\"]*)['\"]",
-                                  version_file, re.M)
+VERSION = '1.0'
 
-    if not version_match:
-        raise RuntimeError("Unable to find version string in %s" % (fname, ))
-
-    version = version_match.group(1)
-    return version
-
-
-version = find_version('CICD_PipeLine', '__init__.py')
-install_requires=[
-    'six',
-    'http-parser',
-    'addict',
+install_requires = [
+    'pytest>=3.5.1',
+    'pytest-rerunfailures>=4.1',
+    'allure-pytest>=2.5.0',
+    'allure-python-commons>=2.5.0',
+    'pytest-xdist>=2.1.0',
+    'selenium>=3.141.0',
+    'chromedriver>=2.24.1',
+    'pytest-html>=2.1.1'
 ]
-PY3 = sys.version_info > (3, )
-PYPY = getattr(sys, 'pypy_version_info', False) and True or False
 
-if (PY3 or PYPY):
-    install_requires += ['kazoo']
-else:
-    install_requires += ['zkpython']
-print(install_requires)
 
-setup(
-    name='pymesos',
-    version=version,
-    description="A pure python implementation of Mesos scheduler and executor",
-    packages=find_packages(),
-    platforms=['POSIX'],
-    classifiers=[
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
-        'Operating System :: POSIX',
-        'Programming Language :: Python',
-    ],
-    keywords='mesos',
-    author="Zhongbo Tian",
-    author_email="tianzhongbo@douban.com",
-    url="https://github.com/douban/pymesos",
-    download_url=('https://github.com/douban/pymesos/archive/%s.tar.gz' %
-                  version),
-    install_requires=install_requires,
-    setup_requires=pytest_runner,
-    tests_require=['pytest-cov', 'pytest-randomly', 'pytest-mock', 'pytest'],
-)
+def main():
+    setup(
+        name='CICD_PipeLine',
+        version=VERSION,
+        description='Pytest testing framework using selenium',
+        author='fred',
+        url='https://github.com/yasserfaraazkhan/Selenium-Python-Pytest.git',
+        install_requires=install_requires
+    )
+
+
+if __name__ == '__main__':
+    main()
