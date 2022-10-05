@@ -19,7 +19,23 @@ classifiers = [
     for x in "2 2.7 3 3.4 3.5 3.6 3.7".split()
 ]
 
+
+
 def get_environment_marker_support_level():
+    """
+    Tests how well setuptools supports PEP-426 environment marker.
+    The first known release to support it is 0.7 (and the earliest on PyPI seems to be 0.7.2
+    so we're using that), see: https://setuptools.readthedocs.io/en/latest/history.html#id350
+    The support is later enhanced to allow direct conditional inclusions inside install_requires,
+    which is now recommended by setuptools. It first appeared in 36.2.0, went broken with 36.2.1, and
+    again worked since 36.2.2, so we're using that. See:
+    https://setuptools.readthedocs.io/en/latest/history.html#v36-2-2
+    https://github.com/pypa/setuptools/issues/1099
+    References:
+    * https://wheel.readthedocs.io/en/latest/index.html#defining-conditional-dependencies
+    * https://www.python.org/dev/peps/pep-0426/#environment-markers
+    * https://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-platform-specific-dependencies
+    """
     try:
         version = pkg_resources.parse_version(setuptools.__version__)
         if version >= pkg_resources.parse_version("36.2.2"):
@@ -62,7 +78,7 @@ def main():
             install_requires.append("funcsigs")
 
     setup(
-        name="CICD_PipeLine",
+        name="pytest",
         description="pytest: simple powerful testing with Python",
         use_scm_version={"write_to": "src/_pytest/_version.py"},
         url="http://pytest.org",
